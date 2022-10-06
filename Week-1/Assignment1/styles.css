@@ -24,70 +24,104 @@ body {
   vertical-align: top;
 }
 
-.footerTabel > th {
-}
-
 .header {
-  background-color: rgb(32, 135, 169);
+  background-color: rgb(60, 63, 63);
   display: block;
   top: 100px;
   left: 100px;
   right: 100px;
-  transition: 10s;
+  transition: 0.3s;
   padding-left: 20px;
   width: 100%;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 .data {
   width: 100%;
+  margin-left: 2.5%;
+}
+.headerIcons span {
+  margin-bottom: 100%;
+  margin-left: 1%;
+  color: white;
+  font-size: 40%;
+}
+.headerIcons {
+  position: absolute;
+  top: 29%;
+  width: 100%;
+  margin-left: 16%;
+  margin-bottom: 15%;
 }
 table,
 th,
 td {
-  text-align: center;
-  padding: 2%;
+  text-align: left;
+  padding: 1%;
+  margin-left: 10%;
   border-collapse: collapse;
-  border: 2rem lightblue;
+  border: 1rem lightblue;
+  font-size: 80%;
+  width: 10%;
+  font-weight: bold;
 }
 tr {
-  margin-top: 10px;
-  padding: 10rem 100rem 10rem;
+  margin-top: 5px;
+  padding: 1rem 10rem 10rem;
 }
 tr:nth-child(even) {
-  background-color: lightblue;
+  background-color: rgb(217, 230, 235);
 }
 h6 {
   margin: 0;
   top: 0;
   bottom: 0;
   line-height: 0;
+  color: white;
 }
 h5 {
   margin: 0;
   top: 10px;
   bottom: 0;
   line-height: 40px;
+  color: white;
 }
-.footer {
-  border: 1rem solid darkblue;
-  bottom: 0;
-  height: 100%;
-  top: 08px;
-  margin-left: 5%;
+.footerMain {
+  position: absolute;
+  background-color: rgb(70, 118, 182);
+  top: 100%;
+  width: 100%;
+  margin-left: 2%;
 }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 5%;
-  background-color: #85a9d5;
-  position: fixed;
-  height: 100%;
-  top: 08px;
-  overflow: auto;
-  border: 1px solid black;
-  transition: 10s;
+.FooterIcons {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  margin-bottom: 18%;
+  font-weight: bold;
+  left: 33%;
+}
+.FooterIcons span {
+  margin-bottom: 100%;
+  margin-left: 10%;
+  color: white;
+  font-size: 40%;
+  font-weight: 200;
+}
+.sideBar {
+  background-color: rgb(217, 230, 235);
+  position: absolute;
+  height: 109%;
+  top: 1.5%;
+  width: 2%;
+  font-weight: 900;
+  font-style: normal;
+}
+.sideBar span {
+  height: 15%;
+  display: block;
+  font-size: 90%;
+  text-align: center;
+  font-stretch: expanded;
 }
 li a {
   display: block;
@@ -98,5 +132,18 @@ li a {
 
 li a:hover {
   background-color: #555;
+  color: white;
+}
+
+.shareColumn {
+  border: thin solid blue;
+}
+.cur {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  margin-left: 5%;
+  margin-bottom: 15%;
+  font-size: 45%;
   color: white;
 }
