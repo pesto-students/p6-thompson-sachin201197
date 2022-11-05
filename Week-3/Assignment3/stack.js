@@ -1,24 +1,24 @@
 "use strict";
 
 // function stack() {
-//   //   return {
+//     return {
 //   items = [];
 //   return function pushVar(item) {
 //     return this.items.push(item);
 //   };
-//   //   console.log(this.items);
-//   //   function popVar() {
-//   //     return this.items.pop();
-//   //   }
-//   //   //};
-//   //   return pushVar, popVar;
+//     console.log(this.items);
+//     function popVar() {
+//       return this.items.pop();
+//     }
+//     //};
+//     return pushVar, popVar;
 // }
 // const st = stack;
 // const s = st.bind(stack);
 // console.log(st.pushVar("ii"));
 
 function createStack() {
-  var items = [];
+  const items = [];
   console.log(items);
   function push(item) {
     items.push(item);
@@ -30,6 +30,6 @@ function createStack() {
 }
 const [push, pop, it] = createStack();
 push(10);
-push(5);
+push(90);
 pop();
 it;
