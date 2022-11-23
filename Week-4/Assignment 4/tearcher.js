@@ -36,5 +36,5 @@ teachers.prototype.teach = (subject) => {
 };
 
 const tearche = new teachers();
-tearche.constru("sachin", 23);
+tearche.constru();
 tearche.teach("Protytype");
