@@ -24,6 +24,10 @@ class stack {
   lengthOfStack() {
     return this.st.length;
   }
+
+  isEmpty() {
+    return this.st.length == 0;
+  }
 }
 
 // const str = new stack();
