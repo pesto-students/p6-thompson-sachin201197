@@ -1,4 +1,3 @@
-//var linkedlist = require("singlyLinkedList_templat.js");
 import { linkedList } from "./singlyLinkedList_templat.js";
 
 const reverse = function (head) {
@@ -10,9 +9,11 @@ const reverse = function (head) {
     prev = head;
     head = temp;
   }
-  //list.printList(prev);
   return (list.head = prev);
 };
+
+//TC - O(n)
+//SC - O(1)
 
 var list = new linkedList();
 list.add(1);

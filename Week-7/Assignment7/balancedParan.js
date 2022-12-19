@@ -13,18 +13,6 @@ const parnthesisChecker = function (s) {
   return array.length === 0;
 };
 
+//TC - O(n)
+//SC - O(n) - it will grow with the size of an array
 console.log(parnthesisChecker("(]){[()]}"));
-
-// const st = new stack();
-// var parArray = str.split("");
-// console.log(parArray);
-// for (var i = 0; i < parArray.length; i++) {
-//   if (parArray[i] == "(") st.push(")");
-//   else if (parArray[i] == "{") st.push("}");
-//   else if (parArray[i] == "[") st.push("]");
-//   else if (st.pop() === parArray[i]) {
-//     console.log(st.pop() !== parArray[i]);
-//     return false;
-//   }
-// }
-// return st.lengthOfStack() === 0;

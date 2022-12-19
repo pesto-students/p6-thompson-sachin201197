@@ -24,22 +24,6 @@ class stack {
   lengthOfStack() {
     return this.st.length;
   }
-
-  isEmpty() {
-    return this.st.length == 0;
-  }
 }
-
-// const str = new stack();
-// str.push(10);
-// str.push(40);
-// str.push(30);
-// str.push(80);
-// str.push(00);
-// str.push(70);
-// // str.pop();
-// str.print();
-// console.log(str.search(100));
-// console.log(str.peek());
 
 export { stack };

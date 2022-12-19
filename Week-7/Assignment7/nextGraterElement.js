@@ -1,36 +1,23 @@
-import { stack } from "./stack_template.js";
+var nextGreaterElements = function (nums) {
+  var stack = [0];
+  var result = new Array(nums.length).fill(-1);
 
-const nextGraterElement = function (nums) {
-  const st = new stack();
-  var result = [];
-  var n = nums.length - 1;
-  for (var i = n; i >= 0; i--) {
-    console.log(st.peek());
-    while (st.peek() < nums[i]) {
-      st.pop();
+  for (let i = 1; i < nums.length; i++) {
+    while (stack && nums[stack[stack.length - 1]] < nums[i]) {
+      result[stack.pop()] = nums[i];
     }
-    if (st.peek() > nums[i]) {
-      result[i] = st.peek();
-      st.push(nums[i]);
-    } else {
-      st.push(nums[i]);
-      result[i] = -1;
+    stack.push(i);
+  }
+  for (let i of nums) {
+    while (stack && nums[stack[stack.length - 1]] < i) {
+      result[stack.pop()] = i;
     }
   }
-  console.log(st);
   return result;
 };
 
-var arr = [1, 2, 3, 4, 3];
-console.log(nextGraterElement(arr));
+// TC - O(n)+O(n) = O(n)
+// SC - O(n)
 
-// var result = [];
-//   var n = nums.length * 2;
-//   for (var i = 0; i < n - 1; i++) {
-//     while (!st.isEmpty && st.peek() < nums[i]) {
-//       st.pop();
-//     }
-//     st.push(i);
-//   }
-//   console.log(st);
-//   return nums;
+var arr = [3, 4, 5, 6, 7, 8];
+console.log(nextGreaterElements(arr));
