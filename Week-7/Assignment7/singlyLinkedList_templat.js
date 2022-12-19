@@ -101,8 +101,6 @@ class linkedList {
     while (cnode != null) {
       str += cnode.element + "--->";
       cnode = cnode.next;
-      // document.write(node.data + " ");
-      // node = node.next;
     }
     console.log(str + "null");
   }
