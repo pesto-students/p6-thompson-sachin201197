@@ -1,4 +1,4 @@
-import { levelOrderTraverssel } from "./binaryTree_templet.js";
+import { createTree } from "./binaryTree_templet.js";
 
 const maxDepth = function (root) {
   if (root == null) return 0;
@@ -9,5 +9,5 @@ const maxDepth = function (root) {
 };
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const node = levelOrderTraverssel(arr, 0);
+const node = createTree(arr, 0);
 console.log(maxDepth(node));

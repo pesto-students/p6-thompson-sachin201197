@@ -50,11 +50,11 @@ class binarySearchTree {
     return cuur;
   }
 }
-function levelOrderTraverssel(arr, i) {
+function createTree(arr, i) {
   if (arr[i] == null) return;
   var root = new TreeNode(arr[i]);
-  root.left = levelOrderTraverssel(arr, 2 * i + 1);
-  root.right = levelOrderTraverssel(arr, 2 * i + 2);
+  root.left = createTree(arr, 2 * i + 1);
+  root.right = createTree(arr, 2 * i + 2);
 
   return root;
 }
@@ -84,10 +84,10 @@ var arr = [3, 1, 2, 4];
 // const node = new levelOrderTraverssel(arr, 0);
 // inOrder(node);
 var BTS = new binarySearchTree(arr);
-// BTS.insert(10);
-// BTS.insert(15);
-// BTS.insert(5);
+BTS.insert(10);
+BTS.insert(15);
+BTS.insert(5);
 var root = BTS.display();
 console.log(validateBinarySearchTree(root));
 
-export { levelOrderTraverssel };
+export { createTree };
