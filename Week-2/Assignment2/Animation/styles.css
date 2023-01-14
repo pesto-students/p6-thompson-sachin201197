@@ -1,0 +1,92 @@
+.main {
+  border: solid black;
+  width: 1000px;
+  height: 500px;
+  margin-left: 10%;
+}
+
+.main:hover .topLeft {
+  animation-name: toLeft;
+  animation-duration: 1s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  transform: rotate(90deg) translateY(150px);
+  transition: 10s;
+}
+
+.main:hover .topRight {
+  transform: rotate(-90deg) translateY(150px);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.main:hover .bottomleft {
+  transform: rotate(-90deg) translateY(-150px);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+
+.main:hover .bottomRight {
+  transform: rotate(90deg) translateY(-150px);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.topLeft {
+  position: absolute;
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  margin-left: 502px;
+  margin-top: 73px;
+  /* transform: translate(400px, 150px); */
+}
+
+.topRight {
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin-left: 654px;
+  margin-top: 73px;
+}
+
+.bottomleft {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin-left: 502px;
+  margin-top: 224px;
+}
+
+.bottomRight {
+  display: flex;
+  background-color: green;
+  width: 150px;
+  height: 150px;
+  /* transform: translate(600px, 0px); */
+  position: absolute;
+  margin-left: 654px;
+  margin-top: 224px;
+}
+h1 {
+  position: relative;
+  width: 8%;
+  top: 55%;
+  left: 60%;
+}
+
+@keyframes toLeft {
+  0% {
+    transform: rotate(90deg) translateY(150px);
+    transition: 10s;
+  }
+  100% {
+    transform: rotate(-90deg) translateY(150px);
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+  }
+}
