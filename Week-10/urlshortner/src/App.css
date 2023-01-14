@@ -1,0 +1,194 @@
+.conatiner {
+  height: 80vh;
+  border: 100% solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aqua;
+}
+
+.Inputconatiner {
+  text-align: center;
+  /* background-color: rgb(216, 213, 233); */
+}
+
+.Inputconatiner h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.Inputconatiner h1 span {
+  color: orange;
+}
+
+.Inputconatiner div {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.Inputconatiner input::placeholder {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 0 1rem;
+  height: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: goldenrod;
+  background-color: darkblue;
+  box-shadow: 0 2px;
+}
+
+button:active {
+  box-shadow: 0 5px;
+  transform: translateY(4px);
+}
+
+.Inputconatiner input {
+  width: 50%;
+  padding: 0.5rem 0.2rem 0.5rem 0;
+  text-indent: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background: lightblue;
+}
+
+/***** results*****/
+
+.results {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25%;
+}
+
+.results p {
+  width: 50%;
+  padding: 0.5rem 0.2rem 0.1rem 0;
+  text-indent: 1rem;
+  border: none;
+  outline: none;
+  margin-left: 6rem;
+  border-radius: 0.5rem;
+}
+.results button {
+  padding: 0 1rem;
+  height: 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: goldenrod;
+  background-color: darkblue;
+}
+
+.nodata {
+  text-align: center;
+}
+
+.HeaderContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.HeaderContainer h2 {
+  margin-left: 10%;
+}
+
+.appData {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.appData span {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.auth {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50rem;
+  margin-right: 1rem;
+}
+.auth span {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: row;
+  margin-right: 2rem;
+}
+
+.footercontainer {
+  border: 0.4rem solid orange;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.footerappData {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+.footerappData span {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.errorHandler {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-top: 5rem;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Feature h2 {
+  color: orange;
+  text-align: center;
+}
+
+.Pricing h2 {
+  color: orange;
+  text-align: center;
+}
+.about h2 {
+  color: orange;
+  text-align: center;
+}
+
+.all-feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.priceDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
