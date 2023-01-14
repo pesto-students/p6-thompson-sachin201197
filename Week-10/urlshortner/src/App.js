@@ -8,7 +8,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 
 function App() {
-  // const [inputValue, setInputvalue] = useState("");
+  document.title = "Shortly";
   return (
     <Router>
       <div className="App">
