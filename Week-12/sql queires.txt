@@ -1,0 +1,21 @@
+-- fetch 
+
+--Below will fetch the cities under the warehouse
+SELECT * FROM CITIES c inner join WHAREHOUSES W
+ where  W.LOCATION = c.CITY ;
+
+SELECT * FROM ORDERS;
+SELECT * FROM ITEMS;
+SELECT * FROM orderItems;
+SELECT * FROM CUSTOMER;
+SELECT * FROM ORDERS;
+SELECT * FROM ITEMS;
+
+-- Belo will fetch the min weigth of the product      
+SELECT min(WEIGHT) FROM ITEMS ;
+
+-- Below is to check which cutomer order details
+SELECT * FROM orderItems inner join ORDERS o 
+on o.CUST = '1004' and OID = o.ONO
+inner join ITEMS i 
+where IID = i.ITEMNO;
