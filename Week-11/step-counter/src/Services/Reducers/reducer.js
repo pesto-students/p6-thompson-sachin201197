@@ -17,6 +17,6 @@ export default function updateCounter(state = intialState, action) {
       };
       break;
     default:
-      console.log("No type found");
+      return state;
   }
 }
