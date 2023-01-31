@@ -46,7 +46,16 @@ foreign key(OID) references ORDERS(ONO),
 foreign key(IID) references ITEMS(ITEMNO)
 );
 
--- insert
+CREATE TABLE storeItems(
+STORE_ID INT(5),
+ITEM_ID INT(5),
+ITEM_QTY INT(4),
+foreign key(STORE_ID) references STORES(SID),
+foreign key(ITEM_ID) references ITEMS(ITEMNO)
+);
+
+
+-- insert-------------
 
 INSERT INTO CITIES VALUES ( 'Banglore', 'Karnataka');
 INSERT INTO WHAREHOUSES VALUES ( 101,'Banglore Central', 'Banglore');
