@@ -1,45 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const request = require("request");
+const bodyParser = require("body-parser");
+const lData = require("./locationData.json");
+
+router.use(bodyParser.urlencoded({ extended: true }));
 
 router.get("/", function (req, res) {
-  res.send("hello World");
+  res.send("Get Weather deatils of your city");
 });
 
-const cities = [
-  { ID: 1, city: "Banglore", we: null },
-  { ID: 2, city: "France" },
-  { ID: 3, city: "Spain" },
-  { ID: 4, city: "Barcelona" },
-  { ID: 5, city: "japan" },
-  { ID: 6, city: "uae" },
-];
-router.get("/cities", function (req, res) {
-  const page = req.query.page;
-  const limit = 3;
-  const startIndex = (page - 1) * limit;
-  const endIndex = page * limit;
-  const results = cities.slice(startIndex, endIndex);
-  console.log(startIndex, endIndex);
-  res.send(results);
-});
-
-function appendWeatherinCities() {}
-function getWeather(citys) {
-  console.log(citys);
-  request(
-    `https://api.weatherapi.com/v1/current.json?key=a7bdf900197548ad8cd143616232601&q=${citys}`,
-    function (error, response, body) {
-      var data = JSON.parse(body);
-      if (response.statusCode == 200) {
-        res.we = data.current.condition.text;
-      } else {
-        console.error("error:", error); // Print the error if one occurred
-        console.log("statusCode:", response && response.location); // Print
-      }
-    }
-  );
-}
 router.get("/cities/:city", function (req, res) {
   var city = req.params.city;
   console.log(city);
@@ -52,7 +22,7 @@ router.get("/cities/:city", function (req, res) {
       }
       if (response.statusCode == 200) {
         res.send(
-          `The Weather in your city ${city} is ${data.current.condition.text}`
+          `The Weather in your city ${city} is ${data.current.condition.text} and Temperature is ${data.current.temp_c}  C`
         );
       } else {
         console.error("error:", error); // Print the error if one occurred
@@ -61,4 +31,37 @@ router.get("/cities/:city", function (req, res) {
     }
   );
 });
+
+var cities = ["Bangalore", "France", "UAE", "USA"];
+let multipleCityData = [];
+function getMultiCity() {
+  for (let i = 0; i < cities.length; i++) {
+    request(
+      `https://api.weatherapi.com/v1/current.json?key=a7bdf900197548ad8cd143616232601&q=${cities[i]}`,
+      function (error, response, body) {
+        var data = JSON.parse(body);
+        if (response.statusCode == 200) {
+          multipleCityData.push(data);
+        } else {
+          console.error("error:", error); // Print the error if one occurred
+          console.log("statusCode:", response && response.location); // Print
+        }
+      }
+    );
+  }
+}
+getMultiCity();
+
+router.get("/cities", function (req, res) {
+  var page = req.query.page;
+  if (!page) {
+    res.send(multipleCityData);
+  }
+  var limit = 2;
+  var startIndex = (page - 1) * limit;
+  var endIndex = page * limit;
+  var data = multipleCityData.slice(startIndex, endIndex);
+  res.send(data);
+});
+
 module.exports = router;
