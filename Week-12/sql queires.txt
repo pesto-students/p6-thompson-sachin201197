@@ -1,0 +1,43 @@
+-- fetch 
+
+--Below will fetch the cities under the warehouse
+SELECT * FROM CITIES c inner join WHAREHOUSES W
+ where  W.LOCATION = c.CITY ;
+
+SELECT * FROM ORDERS;
+SELECT * FROM ITEMS;
+SELECT * FROM orderItems;
+SELECT * FROM CUSTOMER;
+SELECT * FROM ORDERS;
+SELECT * FROM ITEMS;
+
+-- Belo will fetch the min weigth of the product      
+SELECT min(WEIGHT) FROM ITEMS ;
+
+-- Below is to check which cutomer order details
+SELECT * FROM orderItems inner join ORDERS o 
+on o.CUST = '1004' and OID = o.ONO
+inner join ITEMS i 
+where IID = i.ITEMNO;
+
+INSERT INTO storeItems VALUES(3001, 1, 10);
+INSERT INTO storeItems VALUES(3001, 11, 20);
+INSERT INTO storeItems VALUES(2001, 1, 15);
+
+
+-- A1
+select (DESCRIPTION) from ITEMS ORDER BY WEIGHT LIMIT 1;
+
+-- A2
+select * from WHAREHOUSES;
+where LOCATION = 'Banglore';
+
+-- A3
+SELECT * FROM orderItems inner join ORDERS o 
+on o.CUST = '1004' and OID = o.ONO
+inner join ITEMS i 
+where IID = i.ITEMNO;
+
+-- A4
+select LOCATION, COUNT(LOCATION) from WHAREHOUSES GROUP BY LOCATION 
+ORDER BY COUNT(LOCATION) desc LIMIT 1;
